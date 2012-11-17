@@ -1,0 +1,201 @@
+/***************************************************************************
+ *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
+ *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
+ *									   *
+ *  Merc Diku Mud improvments copyright (C) 1992, 1993 by Michael	   *
+ *  Chastain, Michael Quan, and Mitchell Tse.				   *
+ *									   *
+ *  In order to use any part of this Merc Diku Mud, you must comply with   *
+ *  both the original Diku license in 'license.doc' as well the Merc	   *
+ *  license in 'license.txt'.  In particular, you may not remove either of *
+ *  these copyright notices.						   *
+ *									   *
+ *  Much time and thought has gone into this software and you are	   *
+ *  benefitting.  We hope that you share your changes too.  What goes	   *
+ *  around, comes around.						   *
+ ***************************************************************************/
+ 
+/***************************************************************************
+*	ROM 2.4 is copyright 1993-1996 Russ Taylor			   *
+*	ROM has been brought to you by the ROM consortium		   *
+*	    Russ Taylor (rtaylor@efn.org)				   *
+*	    Gabrielle Taylor						   *
+*	    Brian Moore (zump@rom.org)					   *
+*	By using this code, you have agreed to follow the terms of the	   *
+*	ROM license, in the file Rom24/doc/rom.license			   *
+***************************************************************************/
+
+
+
+/*
+ * Spell functions.
+ * Defined in magic.c and magic2.c.
+ */
+DECLARE_SPELL_FUN(	spell_null		);
+DECLARE_SPELL_FUN(	spell_acid_blast	);
+DECLARE_SPELL_FUN(	spell_animate		);
+DECLARE_SPELL_FUN(	spell_armor		);
+DECLARE_SPELL_FUN(	spell_web		);
+DECLARE_SPELL_FUN(	spell_reflect		);
+DECLARE_SPELL_FUN(	spell_entangle		);
+DECLARE_SPELL_FUN(	spell_firestorm		);
+DECLARE_SPELL_FUN(	spell_tremor		);
+DECLARE_SPELL_FUN(	spell_bless		);
+DECLARE_SPELL_FUN(	spell_blindness		);
+DECLARE_SPELL_FUN(	spell_burning_hands	);
+DECLARE_SPELL_FUN(	spell_call_lightning	);
+DECLARE_SPELL_FUN(      spell_calm		);
+DECLARE_SPELL_FUN(      spell_cancellation	);
+DECLARE_SPELL_FUN(	spell_cause_critical	);
+DECLARE_SPELL_FUN(	spell_cause_light	);
+DECLARE_SPELL_FUN(	spell_cause_serious	);
+DECLARE_SPELL_FUN(	spell_change_sex	);
+DECLARE_SPELL_FUN(      spell_chain_lightning   );
+DECLARE_SPELL_FUN(	spell_charm_person	);
+DECLARE_SPELL_FUN(	spell_chill_touch	);
+DECLARE_SPELL_FUN(	spell_colour_spray	);
+DECLARE_SPELL_FUN(	spell_continual_light	);
+DECLARE_SPELL_FUN(	spell_control_weather	);
+DECLARE_SPELL_FUN(	spell_create_food	);
+DECLARE_SPELL_FUN(	spell_create_rose	);
+DECLARE_SPELL_FUN(	spell_create_spring	);
+DECLARE_SPELL_FUN(	spell_create_water	);
+DECLARE_SPELL_FUN(	spell_cure_blindness	);
+DECLARE_SPELL_FUN(	spell_cure_critical	);
+DECLARE_SPELL_FUN(      spell_cure_disease	);
+DECLARE_SPELL_FUN(	spell_cure_light	);
+DECLARE_SPELL_FUN(	spell_cure_poison	);
+DECLARE_SPELL_FUN(	spell_cure_serious	);
+DECLARE_SPELL_FUN(	spell_curse		);
+DECLARE_SPELL_FUN(      spell_demonfire		);
+DECLARE_SPELL_FUN(	spell_detect_evil	);
+DECLARE_SPELL_FUN(	spell_detect_good	);
+DECLARE_SPELL_FUN(	spell_detect_hidden	);
+DECLARE_SPELL_FUN(	spell_detect_invis	);
+DECLARE_SPELL_FUN(	spell_detect_magic	);
+DECLARE_SPELL_FUN(	spell_detect_poison	);
+DECLARE_SPELL_FUN(	spell_detect_alignment	);
+DECLARE_SPELL_FUN(	spell_dispel_evil	);
+DECLARE_SPELL_FUN(      spell_dispel_good       );
+DECLARE_SPELL_FUN(	spell_dispel_magic	);
+DECLARE_SPELL_FUN(	spell_earthquake	);
+DECLARE_SPELL_FUN(	spell_enchant_armor	);
+DECLARE_SPELL_FUN(	spell_enchant_weapon	);
+DECLARE_SPELL_FUN(	spell_imbue	);
+DECLARE_SPELL_FUN(	spell_alchemy	);
+DECLARE_SPELL_FUN(	spell_agony	);
+DECLARE_SPELL_FUN(	spell_eagle_eye	);
+DECLARE_SPELL_FUN(	spell_call_animal	);
+DECLARE_SPELL_FUN(	spell_silence	);
+DECLARE_SPELL_FUN(  spell_strengthen_ground);
+DECLARE_SPELL_FUN(	spell_scribery	);
+DECLARE_SPELL_FUN(	spell_death_coil	);
+DECLARE_SPELL_FUN(	spell_haven	);
+DECLARE_SPELL_FUN(	spell_unholy_word	);
+DECLARE_SPELL_FUN(	spell_death_touch	);
+DECLARE_SPELL_FUN(	spell_minion	);
+DECLARE_SPELL_FUN(	spell_soul_coil	);
+DECLARE_SPELL_FUN(	spell_wall_of_force	);
+DECLARE_SPELL_FUN(	spell_screaming_wall	);
+DECLARE_SPELL_FUN(	spell_flaming_wall	);
+DECLARE_SPELL_FUN(	spell_living_wall	);
+DECLARE_SPELL_FUN(	spell_purify	);
+DECLARE_SPELL_FUN(	spell_nullify	);
+DECLARE_SPELL_FUN(	spell_energy_drain	);
+DECLARE_SPELL_FUN(	spell_faerie_fire	);
+DECLARE_SPELL_FUN(	spell_faerie_fog	);
+DECLARE_SPELL_FUN(	spell_farsight		);
+DECLARE_SPELL_FUN(	spell_fireball		);
+DECLARE_SPELL_FUN(	spell_servant		);
+DECLARE_SPELL_FUN(	spell_decoy		);
+DECLARE_SPELL_FUN(	spell_mount		);
+DECLARE_SPELL_FUN(	spell_guardian		);
+DECLARE_SPELL_FUN(	spell_fireproof		);
+DECLARE_SPELL_FUN(	spell_flamestrike	);
+DECLARE_SPELL_FUN(	spell_floating_disc	);
+DECLARE_SPELL_FUN(	spell_fly		);
+DECLARE_SPELL_FUN(      spell_frenzy		);
+DECLARE_SPELL_FUN(	spell_gate		);
+DECLARE_SPELL_FUN(	spell_giant_strength	);
+DECLARE_SPELL_FUN(	spell_harm		);
+DECLARE_SPELL_FUN(      spell_haste		);
+DECLARE_SPELL_FUN(	spell_heal		);
+DECLARE_SPELL_FUN(	spell_prism		);
+DECLARE_SPELL_FUN(	spell_heat_metal	);
+DECLARE_SPELL_FUN(      spell_holy_word		);
+DECLARE_SPELL_FUN(	spell_identify		);
+DECLARE_SPELL_FUN(	spell_infravision	);
+DECLARE_SPELL_FUN(	spell_invis		);
+DECLARE_SPELL_FUN(	spell_know_level	);
+DECLARE_SPELL_FUN(	spell_lightning_bolt	);
+DECLARE_SPELL_FUN(	spell_locate_object	);
+DECLARE_SPELL_FUN(	spell_magic_missile	);
+DECLARE_SPELL_FUN(      spell_mass_healing	);
+DECLARE_SPELL_FUN(	spell_mass_invis	);
+DECLARE_SPELL_FUN(	spell_nexus		);
+DECLARE_SPELL_FUN(	spell_pass_door		);
+DECLARE_SPELL_FUN(      spell_plague		);
+DECLARE_SPELL_FUN(	spell_poison		);
+DECLARE_SPELL_FUN(	spell_decay		);
+DECLARE_SPELL_FUN(	spell_portal		);
+DECLARE_SPELL_FUN(	spell_protection_evil	);
+DECLARE_SPELL_FUN(	spell_protection_good	);
+DECLARE_SPELL_FUN(	spell_ray_of_truth	);
+DECLARE_SPELL_FUN(	spell_smite		);
+DECLARE_SPELL_FUN(	spell_recharge		);
+DECLARE_SPELL_FUN(	spell_refresh		);
+DECLARE_SPELL_FUN(	spell_remove_curse	);
+DECLARE_SPELL_FUN(	spell_sanctuary		);
+DECLARE_SPELL_FUN(	spell_shocking_grasp	);
+DECLARE_SPELL_FUN(	spell_shield		);
+DECLARE_SPELL_FUN(	spell_sleep		);
+DECLARE_SPELL_FUN(	spell_slow		);
+DECLARE_SPELL_FUN(	spell_stone_skin	);
+DECLARE_SPELL_FUN(	spell_summon		);
+DECLARE_SPELL_FUN(	spell_teleport		);
+DECLARE_SPELL_FUN(	spell_ventriloquate	);
+DECLARE_SPELL_FUN(	spell_weaken		);
+DECLARE_SPELL_FUN(	spell_word_of_recall	);
+DECLARE_SPELL_FUN(	spell_acid_breath	);
+DECLARE_SPELL_FUN(	spell_fire_breath	);
+DECLARE_SPELL_FUN(	spell_frost_breath	);
+DECLARE_SPELL_FUN(	spell_gas_breath	);
+DECLARE_SPELL_FUN(	spell_lightning_breath	);
+DECLARE_SPELL_FUN(	spell_general_purpose	);
+DECLARE_SPELL_FUN(	spell_high_explosive	);
+DECLARE_SPELL_FUN(  	spell_age		);
+DECLARE_SPELL_FUN(  spell_spirit_blow);
+DECLARE_SPELL_FUN(  spell_enhance_aura);
+DECLARE_SPELL_FUN(	spell_youth		);
+DECLARE_SPELL_FUN(	spell_aaaa_song	);
+DECLARE_SPELL_FUN(	spell_bbbb_song	);
+DECLARE_SPELL_FUN(	spell_cccc_song	);
+DECLARE_SPELL_FUN(	spell_dddd_song	);
+DECLARE_SPELL_FUN(      spell_blink    );
+DECLARE_SPELL_FUN(      spell_bubble    );
+DECLARE_SPELL_FUN(      spell_hold    );
+DECLARE_SPELL_FUN(      spell_lapse    );
+DECLARE_SPELL_FUN(      spell_suspend    );
+DECLARE_SPELL_FUN(      spell_temp_blade    );
+DECLARE_SPELL_FUN(      spell_timestop    );
+DECLARE_SPELL_FUN(      spell_rift    );
+DECLARE_SPELL_FUN(      spell_life_drain);
+DECLARE_SPELL_FUN(      spell_mana_burn);
+DECLARE_SPELL_FUN(      spell_hex);
+DECLARE_SPELL_FUN(      spell_spirit_rain);
+DECLARE_SPELL_FUN(      spell_tracer_cloud);
+DECLARE_SPELL_FUN( spell_summon_fgolem  ); //Fire Golem       -30-
+DECLARE_SPELL_FUN( spell_summon_lgolem  ); //Lightning Golem  -31-
+DECLARE_SPELL_FUN( spell_summon_igolem  ); //Ice Golem        -32-
+DECLARE_SPELL_FUN( spell_summon_Igolem  ); //Iron Golem       -33-
+DECLARE_SPELL_FUN( spell_summon_agolem  ); //Acid Golem       -34-
+DECLARE_SPELL_FUN(	spell_deflect		);
+DECLARE_SPELL_FUN(	spell_chaotic		);
+DECLARE_SPELL_FUN(  spell_draconian_blessing);
+DECLARE_SPELL_FUN(  spell_draconian_mist    );
+DECLARE_SPELL_FUN(  spell_draconian_skin    );
+DECLARE_SPELL_FUN(  spell_prismatic_spray   );
+DECLARE_SPELL_FUN(  spell_zeal_blade        );
+DECLARE_SPELL_FUN(  spell_warlock_blade     );
+DECLARE_SPELL_FUN(  spell_decripify);
+DECLARE_SPELL_FUN(  spell_decay_aura);
